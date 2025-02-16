@@ -1,0 +1,17 @@
+
+  .boton {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de texto grande */
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color azul */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center;
+    margin: 20px;
+  }
+
+  .boton:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  }
