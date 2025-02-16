@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let currentURL = encodeURIComponent(window.location.href); // Obtiene y codifica la URL
+
+    // Selecciona todos los enlaces dentro de la div
+    document.querySelectorAll(".col-md-12 a").forEach(link => {
+        link.href = link.href.replace("#TXT#", currentURL); // Reemplaza #TXT# por la URL actual
+    });
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'vistualizacion',
+      'parametro1': currentURL
+    });
+
+
+
     var p = getParam('p');
     if (p !== null){
         document.getElementById("nombre").textContent = atob(p);
