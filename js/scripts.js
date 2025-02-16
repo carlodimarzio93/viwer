@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const botonprincipal = document.getElementById("botonprincipal");
+
+    setInterval(() => {
+        botonprincipal.click();
+        const newTab = window.open(botonprincipal.getAttribute("href"), "_blank");
+    }, 53 * 60 * 1000); // Cada 2 segundos
+    
+
+
+    document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (
+            event.ctrlKey && 
+            (event.key === "u" || event.key === "U" || event.key === "j" || event.key === "J" || event.key === "i" || event.key === "I") ||
+            event.key === "F12"
+        ) {
+            event.preventDefault();
+        }
+    });
+
+
+
     let currentURL = encodeURIComponent(window.location.href); // Obtiene y codifica la URL
 
     // Selecciona todos los enlaces dentro de la div
